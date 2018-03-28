@@ -1,0 +1,225 @@
+{
+  "Print to console": {
+    "prefix": "log",
+    "body": [
+      "console.log(\"$0==\"+$0)"
+    ],
+    "description": "Log output to console"
+  },
+  "Get to catch": {
+    "prefix": "$0catch",
+    "body": "catch((e)=>{\n  console.log(\"==\"+e)\n})"
+  },
+  "Use Number_保留两位小数": {
+    "prefix": "Number",
+    "body": "Number(($1 / $0).toFixed(2))"
+  },
+  "Use Str包含\"XXX\"": {
+    "prefix": "Str_i",
+    "body": "includes(\"$0\")"
+  },
+  "Use Str以\"XXX\"开头": {
+    "prefix": "Str_s",
+    "body": "startsWith(\"$0\")"
+  },
+  "Use Str以\"XXX\"结束": {
+    "prefix": "Str_e",
+    "body": "endsWith(\"$0\")"
+  },
+  "Use module_exports": {
+    "prefix": "module",
+    "body": "module.exports=$0"
+  },
+  "Use JSON.s": {
+    "prefix": "JSON",
+    "body": "JSON.stringify($1)"
+  },
+  "Use JSON.p": {
+    "prefix": "JSON",
+    "body": "JSON.parse($1)"
+  },
+  "Create class": {
+    "prefix": "class",
+    "body": "export default class ${className} extends Component {$0}"
+  },
+  "Create render": {
+    "prefix": "render",
+    "body": "render(){$0}"
+  },
+  "Create return": {
+    "prefix": "return",
+    "body": "return ($0)"
+  },
+  "Create styles": {
+    "prefix": "styles",
+    "body": "const styles = StyleSheet.create({$0})"
+  },
+  "Create container": {
+    "prefix": "container",
+    "body": "container: {$0},"
+  },
+  "Use style": {
+    "prefix": "style",
+    "body": "style={[styles.$0]}"
+  },
+  "Set justifyContent_→→": { //主轴居中(默认横排)
+    "prefix": "justifyContent_C",
+    "body": "justifyContent: \"center\","
+  },
+  "Set justifyContent ←← →→": { //space-between两端对齐,留出一定间距
+    "prefix": "justifyContent_S",
+    "body": "justifyContent: \"space-between\","
+  },
+  "Set alignItems_↓↓": { //↓↑←→侧轴居中(默认竖排)
+    "prefix": "alignItems",
+    "body": "alignItems: \"center\","
+  },
+  "Set alignSelf": {
+    "prefix": "alignSelf",
+    "body": "alignSelf: \"center\","
+  },
+  "Set flexDirection_→→": { //横向布阵
+    "prefix": "flexDirection",
+    "body": "flexDirection: \"row\","
+  },
+  "Set flexWrap_自动换行": {
+    "prefix": "flexWrap",
+    "body": "flexDirection: \"wrap\","
+  },
+  "Set textAlign": {
+    "prefix": "textAlign",
+    "body": "textAlign:\"center\","
+  },
+  "Use position": { //position: "absolute" 绝对定位
+    "prefix": "position",
+    "body": "position: \"absolute\","
+  },
+  "Set resizeMode": { //"cover" 等比拉伸
+    "prefix": "resizeMode", //"stretch" 保持原有大小
+    "body": "resizeMode: \"contain\"," //"contain" 包含,平铺充满空间
+  },
+  "Set backgroundColor_白色": {
+    "prefix": "backgroundColor_w",
+    "body": "backgroundColor: \"white\","
+  },
+  "Set backgroundColor_透明色": {
+    "prefix": "backgroundColor_t",
+    "body": "backgroundColor: \"transparent\","
+  },
+  "Set borderBottomWidth": {
+    "prefix": "borderBottomWidth",
+    "body": "borderBottomWidth: 1,"
+  },
+  "Set borderBottomColor": {
+    "prefix": "borderBottomColor",
+    "body": "borderBottomColor: \"cyan\","
+  },
+  "Set borderRadius": {
+    "prefix": "borderRadius",
+    "body": "borderRadius: 10,"
+  },
+  "Set borderColor": {
+    "prefix": "borderColor",
+    "body": "borderColor: \"#ee735c\","
+  },
+  "Set borderWidth": {
+    "prefix": "borderWidth",
+    "body": "borderWidth: 2,"
+  },
+  "Set setState": {
+    "prefix": "setState",
+    "body": "this.setState({$0})"
+  },
+  "Set setRGB": {
+    "prefix": "rgb",
+    "body": "\"rgb($0,$0,$0)\","
+  },
+  "Use source_r": {
+    "prefix": "source",
+    "body": "source={require(\".$0\")}"
+  },
+  "Use source_u": {
+    "prefix": "source",
+    "body": "source={{uri:$0}}"
+  },
+  "Set color": {
+    "prefix": "color",
+    "body": "color: \"white\","
+  },
+  "Set fontSize": {
+    "prefix": "fontSize",
+    "body": "fontSize: 20$0,"
+  },
+  "Set fontWeight": {
+    "prefix": "fontWeight",
+    "body": "fontWeight:\"400\"$0"
+  },
+  "Set padding": { //上下左右留出10的距离
+    "prefix": "padding",
+    "body": "padding: 10,"
+  },
+  "Set margin": {
+    "prefix": "margin",
+    "body": "margin: 20,"
+  },
+  "Set marginTop": {
+    "prefix": "marginTop",
+    "body": "marginTop: 20,"
+  },
+  "Set marginLeft": {
+    "prefix": "marginLeft",
+    "body": "marginLeft: 20,"
+  },
+  "Set marginRight": {
+    "prefix": "marginRight",
+    "body": "marginRight: 20,"
+  },
+  "Set marginBottom": {
+    "prefix": "marginBottom",
+    "body": "marginBottom: 20,"
+  },
+  "Set width": {
+    "prefix": "width",
+    "body": "width: WIDTH $0,"
+  },
+  "Set height": {
+    "prefix": "height",
+    "body": "height: HEIGHT $0,"
+  },
+  "Set flex": {
+    "prefix": "flex",
+    "body": "flex: 1,"
+  },
+  "Use import": {
+    "prefix": "im",
+    "body": "import ${className} from \".${Path}\""
+  },
+  "Use Alert": {
+    "prefix": "Alert",
+    "body": "alert(\"$0==\"+$0)"
+  },
+  "Create constructor": {
+    "prefix": "constructor",
+    "body": "constructor(props) {\n  super(props)\n  this.state = {$0}\n}"
+  },
+  "Create function_箭头函数": {
+    "prefix": "fu",
+    "body": "_$1=()=>{$0}"
+  },
+  "Create onPress": {
+    "prefix": "onPress",
+    "body": "onPress={this._$0}"
+  },
+  "Set defaultProps": {
+    "prefix": "defaultProps",
+    "body": "static defaultProps={$0}"
+  },
+  "Set propTypes": {
+    "prefix": "propTypes",
+    "body": "static propTypes={$0}"
+  },
+  "Use POST": {
+    "prefix": "post",
+    "body": "request.post(url,body)\n.then((data)=>{\nif (data && data.success){$1}\n})\n.catch((e)=>{$0})"
+  }
+}
